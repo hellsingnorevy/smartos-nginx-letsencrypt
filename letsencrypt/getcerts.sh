@@ -5,9 +5,10 @@
 # Settings
 DOMAIN=domain.net
 TIMESTAMP=$(date +"%F %T")
+EMAIL=me@myself.me
 
 # Execute
-/opt/local/letsencrypt/letsencrypt-auto certonly -t --renew-by-default --email me@myself.me --text --agree-tos --webroot
+/opt/local/letsencrypt/letsencrypt-auto certonly -t --renew-by-default --email $EMAIL --text --agree-tos --webroot \
 -w /opt/local/share/nginx/web1/ -d web1.$DOMAIN \
 -w /opt/local/share/nginx/web2/ -d web2.$DOMAIN \
 
